@@ -1,6 +1,7 @@
 package com.example.will.geoquiz;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -67,6 +68,15 @@ public class QuizActivity extends Activity {
             }
         });
 
+    }
+
+    //method to start the service
+    public void startService(View view){
+        startService(new Intent(getBaseContext(), SimpleService.class));
+    }
+
+    public void stopService(View view){
+        stopService(new Intent(getBaseContext(), SimpleService.class));
     }
 
     //update question to next question
